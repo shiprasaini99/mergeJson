@@ -1,0 +1,19 @@
+{
+  "name": "json-bundler",
+  "version": "1.0.0",
+  "description": "A project to combine multiple JSON files and package them as a tar.gz archive.",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "webpack": "^5.0.0",
+    "webpack-cli": "^4.0.0",
+    "gulp": "^4.0.0",
+    "gulp-tar": "^2.0.0",
+    "gulp-gzip": "^1.0.0",
+    "del": "^6.0.0"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

@@ -1,4 +1,3 @@
-
 const path = require('path');
 const MergeIntoSingleFilePlugin = require('webpack-merge-and-include-globally');
 
@@ -16,11 +15,16 @@ module.exports = {
       },
       transform: {
         'merged.json': () => {
-          const file1 = require('../ClubJson/src/file1.json');
-          const file2 = require('../ClubJson/src/file2.json');
-          const file3 = require('../ClubJson/src/file3.json');
+          const file1 = require('./src/file1.json');
+          const file2 = require('./src/file2.json');
+          const file3 = require('./src/file3.json');
           
-          const combined = { ...file1, ...file2, ...file3 };
+          const combined = {
+            file1: file1,
+            file2: file2,
+            file3: file3
+          };
+          
           return JSON.stringify(combined, null, 2);
         }
       }
